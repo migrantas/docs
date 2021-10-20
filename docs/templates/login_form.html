@@ -1,0 +1,12 @@
+<form class="text-center form-signin" action="{% url 'auth' %}" method="post">
+    {% csrf_token %}
+    <img class="mb-4" src="/static/img/passport.png" alt="" width="300" height="300">
+     <h1 class="h3 mb-3 font-weight-normal">Для продолжения войдите</h1>
+    <div class="mb-3 alert-danger">{{ error }}</div>
+    <label for="inputEmail" class="sr-only">Логин </label>
+      <input type="login" id="inputEmail" name="login" class="form-control" placeholder="Логин" required autofocus>
+      <label for="inputPassword" class="sr-only">Пароль</label>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Пароль" required>
+    <div class="mb-3"></div>
+    <button type="submit" class="btn btn-primary">Войти</button>
+</form>

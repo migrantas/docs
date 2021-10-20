@@ -1,0 +1,45 @@
+{% extends 'header.html' %}
+{% block main %}
+<body>
+    <header class="header">
+ <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
+ <a class="navbar-brand" href="{% url 'index' %}" role="banner">Документы</a>
+
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Переключить навигацию">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+
+ <div class="collapse navbar-collapse" id="navbarsDefault">
+ <ul class="navbar-nav mr-auto">
+ <li class="nav-item">
+    <a class="nav-link" href="{% url 'index' %}">База</a>
+ </li>
+ <li class="nav-item">
+    <a class="nav-link" href="{% url 'index' %}"></a>
+ </li>
+ </ul>
+     <ul class="nav navbar-nav ml-auto">
+         <li class="nav-item align-right">
+            <a class="nav-link" href="{% url 'index' %}">Выйти</a>
+        </li>
+     </ul>
+ </div>
+ </nav>
+ </header>
+ <main role="main">
+  <div class="jumbotron ">
+  <div class="container">
+    {% block h1 %}
+       <h1 class="display-3"> Добро пожаловать </h1>
+    {% endblock %}
+  </div>
+  </div>
+ <div class="container">
+        {% block context %}
+            <p> test</p>
+        {% endblock %}
+ </div>
+ </main>
+</body>
+{% endblock %}
+</html>
